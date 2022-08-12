@@ -10,7 +10,7 @@
             user: env('DATABASE_USERNAME', 'strapi'),
             password: env('DATABASE_PASSWORD'), 'public',
             ssl: {
-              rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+              ca: env('DATABASE_CA')
             },
           },
           debug: false,
